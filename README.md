@@ -38,4 +38,4 @@ Si deseas tu propia copia en lo que trabajamos en clase:
 3. Extraer el archivo y abrir la carpeta en tu editor
 
 
-Si deseas guardar tus trabajos para el futuro, guarda tus archivos en Classroom.
+Si deseas guardar tus trabajos para el futuro, guarda tus archivos en Classroom.# https-github.com-CS1400-BP-studentnotes-RickyTGA
