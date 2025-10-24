@@ -23,7 +23,7 @@ def duplicados(seq):
     duplicados('llama') -> True  #si tiene letras duplicadas
     """
     # TODO: Termina la funcion
-    pass
+    return len(set(seq)) != len(seq)
 
 
 # ============================
@@ -42,7 +42,7 @@ def encontrar_repeticiones(counter):
     encontrar_repeticiones({'a': 2, 'b': 1, 'c': 3}) -> ['a', 'c']
     """
     # TODO: Termina la funcion
-    return []
+    return [key for key, value in counter.items() if value > 1]
 
 
 # ============================
@@ -63,7 +63,17 @@ def suma_counters(dict1, dict2):
     sumando_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
     """
     # TODO: Termina la funcion
-    pass
+    # Obtiene las dos mitades alternas
+    word1 = word[::2]
+    word2 = word[1::2]
+    # Verifica si ambas mitades están en word_list
+    return word1 in word_list and word2 in word_list
+    for key, value in dict2.items():
+        if key in result:
+            result[key] += value
+        else:
+            result[key] = value
+    return result
 
 
 # ============================
@@ -120,15 +130,15 @@ def contar_valores(word):
 if __name__ == '__main__':
     # Puedes descomentar estas pruebas y añadir más para verificar tu código
 
-    print("--- Pruebas de has_duplicates ---")
-    print(duplicados('hola'))        # False
-    print(duplicados('llama'))       # True
-
     print("\n--- Pruebas de find_repeats ---")
-    test_counter = encontrar_repeticiones('banana')
+    test_counter = contar_valores('banana')
     print(test_counter)  # {'b': 1, 'a': 3, 'n': 2}
     print(encontrar_repeticiones(test_counter))    # ['a', 'n']
-
+    print("\n--- Pruebas de find_repeats ---")
+    test_counter = contar_valores('banana')
+    print(test_counter)  # {'b': 1, 'a': 3, 'n': 2}
+    print(encontrar_repeticiones(test_counter))    # ['a', 'n']
+    print(suma_counters(c1, c2))
     print("\n--- Pruebas de add_counters ---")
     c1 = encontrar_repeticiones('brontosaurios')
     c2 = encontrar_repeticiones('apatosaurios')
