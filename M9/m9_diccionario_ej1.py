@@ -60,14 +60,11 @@ def suma_counters(dict1, dict2):
     Ejemplo:
     dict1 = {'a': 2, 'b': 1}
     dict2 = {'a': 1, 'c': 4}
-    sumando_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
+    suma_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
     """
-    # TODO: Termina la funcion
-    # Obtiene las dos mitades alternas
-    word1 = word[::2]
-    word2 = word[1::2]
-    # Verifica si ambas mitades están en word_list
-    return word1 in word_list and word2 in word_list
+    # Copia dict1 para no mutarlo
+    result = dict(dict1)
+    # Suma los valores de dict2 en result
     for key, value in dict2.items():
         if key in result:
             result[key] += value
@@ -83,6 +80,9 @@ def suma_counters(dict1, dict2):
 def is_interlocking(word, word_list):
     """
     Devuelve True si la palabra se puede dividir en dos palabras válidas usando letras alternas.
+def is_interlocking(word, word_list):
+    """
+    Devuelve True si la palabra se puede dividir en dos palabras válidas usando letras alternas.
 
     word: cadena a evaluar
     word_list: lista o conjunto de palabras válidas (por ejemplo, un diccionario en español)
@@ -95,11 +95,11 @@ def is_interlocking(word, word_list):
 
     Tip: Usa word[::2] y word[1::2] para obtener las dos mitades entrelazadas.
     """
-   
-    pass
-
-
-# ============================
+    # Asegura búsqueda rápida y normaliza a minúsculas
+    word_set = set(word_list)
+    part1 = word[::2]
+    part2 = word[1::2]
+    return (part1 in word_set) and (part2 in word_set)
 # FUNCION DE APOYO
 # ============================
 
@@ -130,22 +130,20 @@ def contar_valores(word):
 if __name__ == '__main__':
     # Puedes descomentar estas pruebas y añadir más para verificar tu código
 
-    print("\n--- Pruebas de find_repeats ---")
+    print("\n--- Pruebas de encontrar_repeticiones ---")
     test_counter = contar_valores('banana')
     print(test_counter)  # {'b': 1, 'a': 3, 'n': 2}
     print(encontrar_repeticiones(test_counter))    # ['a', 'n']
-    print("\n--- Pruebas de find_repeats ---")
-    test_counter = contar_valores('banana')
-    print(test_counter)  # {'b': 1, 'a': 3, 'n': 2}
-    print(encontrar_repeticiones(test_counter))    # ['a', 'n']
-    print(suma_counters(c1, c2))
-    print("\n--- Pruebas de add_counters ---")
-    c1 = encontrar_repeticiones('brontosaurios')
-    c2 = encontrar_repeticiones('apatosaurios')
+
+    print("\n--- Pruebas de suma_counters ---")
+    c1 = contar_valores('brontosaurios')
+    c2 = contar_valores('apatosaurios')
+    print(c1)
+    print(c2)
     print(suma_counters(c1, c2))
 
     print("\n--- Pruebas de is_interlocking ---")
-    diccionario = {'zapato', 'frío', 'pato', 'cielo', 'dado'}
-    print(is_interlocking('escolarizado', diccionario))  # True o False dependiendo del set
+    diccionario = {'zapato', 'frío', 'pato', 'cielo', 'dado', 'es', 'colar', 'izado'}
+    print(is_interlocking('escolarizado', diccionario))  # True
 
     # Agrega más pruebas según necesites
