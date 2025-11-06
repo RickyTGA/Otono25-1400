@@ -65,7 +65,7 @@ def suma_counters(dict1, dict2):
     Ejemplo:
     dict1 = {'a': 2, 'b': 1}
     dict2 = {'a': 1, 'c': 4}
-    sumando_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
+    suma_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
     """
     
     # TODO termina la funcion
@@ -142,7 +142,6 @@ if __name__ == '__main__':
     print(duplicados([1, 2, 3]))     # False
     print(duplicados([1, 2, 2]))     # True
 
-
     print("\n--- Pruebas de encontrar_repeticiones ---")
     test_counter = contar_valores('banana')
     print(test_counter)  # {'b': 1, 'a': 3, 'n': 2}
@@ -158,3 +157,5 @@ if __name__ == '__main__':
     diccionario = {'es', 'colar', 'izado', 'zapato', 'frío', 'pato', 'cielo', 'dado'}
     print(is_interlocking('escolarizado', diccionario))  # True
     print(is_interlocking('zapfríoato', diccionario))
+
+    # Agrega más pruebas según necesites
