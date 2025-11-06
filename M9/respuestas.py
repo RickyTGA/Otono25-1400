@@ -3,7 +3,7 @@ PROYECTO DE PROGRAMACIÓN: Funciones con cadenas, listas y diccionarios
 
 Instrucciones:
 Este archivo contiene varias tareas relacionadas con el uso de cadenas, listas y diccionarios.
-Completa las tareas, terminando los cinco TODO.
+Completa las tareas, terminando los tres TODO.
 
 Puedes probar tus funciones utilizando el bloque "if __name__ == '__main__':" al final del archivo.
 """
@@ -22,7 +22,6 @@ def duplicados(seq):
     duplicados('hola') -> False #no tiene letras duplicadas
     duplicados('llama') -> True  #si tiene letras duplicadas
     """
-    # TODO Agrega el statement de retorno aqui
     return len(seq) != len(set(seq))
 
 
@@ -41,7 +40,7 @@ def encontrar_repeticiones(counter):
     Ejemplo:
     encontrar_repeticiones({'a': 2, 'b': 1, 'c': 3}) -> ['a', 'c']
     """
-    # TODO Si el parámetro es una cadena, primero lo convertimos en un contador
+    # Si el parámetro es una cadena, primero lo convertimos en un contador
     if isinstance(counter, str):
         counter = contar_valores(counter)
 
@@ -65,10 +64,8 @@ def suma_counters(dict1, dict2):
     Ejemplo:
     dict1 = {'a': 2, 'b': 1}
     dict2 = {'a': 1, 'c': 4}
-    suma_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
+    sumando_counters(dict1, dict2) -> {'a': 3, 'b': 1, 'c': 4}
     """
-    
-    # TODO termina la funcion
     result = dict(dict1)  # copiamos el primero para no modificarlo
     for clave, valor in dict2.items():
         result[clave] = result.get(clave, 0) + valor
@@ -94,13 +91,11 @@ def is_interlocking(word, word_list):
 
     Tip: Usa word[::2] y word[1::2] para obtener las dos mitades entrelazadas.
     """
-    # TODO termina la funcion
-    # Extraemos las letras en posiciones pares e impares
-    word_even = word[::2]   # Letras en posiciones 0, 2, 4, ...
-    word_odd = word[1::2]   # Letras en posiciones 1, 3, 5, ...
-    
-    # Verificamos si ambas mitades están en word_list
-    return word_even in word_list and word_odd in word_list
+   
+    palabra1 = word[::2]
+    palabra2 = word[1::2]
+    return palabra1 in word_list and palabra2 in word_list
+
 
 
 # ============================
@@ -118,9 +113,7 @@ def contar_valores(word):
     Ejemplo:
     contar_valores('banana') -> {'b':1, 'a':3, 'n':2}
     """
-    #TODO Agregar un diccionario vacio llamado counter:
     counter = {}
-
     for letter in word:
         if letter in counter:
             counter[letter] += 1
@@ -158,5 +151,3 @@ if __name__ == '__main__':
     diccionario = {'es', 'colar', 'izado', 'zapato', 'frío', 'pato', 'cielo', 'dado'}
     print(is_interlocking('escolarizado', diccionario))  # True
     print(is_interlocking('zapfríoato', diccionario))
-
-    # Agrega más pruebas según necesites
