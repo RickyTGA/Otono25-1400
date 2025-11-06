@@ -20,10 +20,16 @@ def tupla_no_hashable():
 
     # TODO: Añade el número 6 al final de la segunda lista (list1) usando t
     # Resultado esperado: ([1, 2, 3], [4, 5, 6])
+    t[1].append(6)  # Accedemos a list1 a través de la tupla y añadimos 6
+    print(f"Tupla después de modificar: {t}")
 
     # TODO: Intenta usar la tupla t como clave en un diccionario y captura el error con try-except
     # Debes imprimir un mensaje que diga que no se puede usar como clave si ocurre un TypeError
-    pass
+    try:
+        diccionario = {t: "valor"}
+        print("La tupla se pudo usar como clave")
+    except TypeError:
+        print("Error: No se puede usar la tupla como clave porque contiene elementos mutables (listas)")
 
 
 # ============================
@@ -49,7 +55,17 @@ def shift_word(word, shift):
     # Recorre cada letra y aplícale el desplazamiento
     for letter in word:
         # TODO: Maneja letras no reconocidas (espacios, tildes, etc.)
-        pass
+        if letter in letter_map:
+            # Obtenemos la posición actual de la letra
+            old_position = letter_map[letter]
+            # Calculamos la nueva posición con desplazamiento circular
+            new_position = (old_position + shift) % len(letters)
+            # Obtenemos la nueva letra
+            new_letter = reverse_map[new_position]
+            result.append(new_letter)
+        else:
+            # Si la letra no está en nuestro mapeo, la dejamos como está
+            result.append(letter)
 
     # Une la lista resultante en una cadena
     return ''.join(result)
@@ -65,7 +81,22 @@ def most_frequent_letters(texto):
     """
     # TODO: Cuenta las letras ignorando espacios y ordena por frecuencia
     # Tip: Usa value_counts() del ejercicio anterior si lo tienes
-    pass
+    contador = {}
+    
+    # Contamos las letras, ignorando espacios
+    for letra in texto.lower():
+        if letra != ' ':  # Ignoramos espacios
+            contador[letra] = contador.get(letra, 0) + 1
+    
+    # Ordenamos por frecuencia (de mayor a menor)
+    letras_ordenadas = sorted(contador.items(), key=lambda x: x[1], reverse=True)
+    
+    # Mostramos los resultados
+    print("Letras ordenadas por frecuencia:")
+    for letra, frecuencia in letras_ordenadas:
+        print(f"'{letra}': {frecuencia}")
+    
+    return letras_ordenadas
 
 
 # ============================
@@ -81,7 +112,22 @@ def encontrar_anagramas(lista_palabras):
     ['retainers', 'ternaries']
     """
     # TODO: Crea un diccionario que relacione la palabra ordenada con sus anagramas
-    pass
+    grupos_anagramas = {}
+    
+    for palabra in lista_palabras:
+        # Ordenamos las letras de la palabra para crear una clave
+        clave = ''.join(sorted(palabra))
+        
+        # Añadimos la palabra al grupo correspondiente
+        if clave in grupos_anagramas:
+            grupos_anagramas[clave].append(palabra)
+        else:
+            grupos_anagramas[clave] = [palabra]
+    
+    # Imprimimos solo los grupos que tienen más de una palabra (anagramas)
+    for clave, grupo in grupos_anagramas.items():
+        if len(grupo) > 1:
+            print(grupo)
 
 
 # ============================
@@ -96,7 +142,15 @@ def word_distance(word1, word2):
     word_distance("casa", "cata") -> 1
     """
     # TODO: Usa zip para comparar letra por letra y contar diferencias
-    pass
+    if len(word1) != len(word2):
+        return -1  # Retornamos -1 si las palabras no tienen la misma longitud
+    
+    diferencias = 0
+    for letra1, letra2 in zip(word1, word2):
+        if letra1 != letra2:
+            diferencias += 1
+    
+    return diferencias
 
 
 # ============================
@@ -114,7 +168,27 @@ def encontrar_metatesis(lista_palabras):
     # 1. Encuentra anagramas usando el mismo enfoque del ejercicio anterior
     # 2. Para cada par en cada grupo de anagramas, verifica si son pares de metátesis
     #    (solo deben diferir en exactamente dos letras y ser del mismo largo)
-    pass
+    
+    grupos_anagramas = {}
+    
+    # Agrupamos anagramas
+    for palabra in lista_palabras:
+        clave = ''.join(sorted(palabra))
+        if clave in grupos_anagramas:
+            grupos_anagramas[clave].append(palabra)
+        else:
+            grupos_anagramas[clave] = [palabra]
+    
+    # Verificamos pares de metátesis en cada grupo de anagramas
+    for grupo in grupos_anagramas.values():
+        if len(grupo) > 1:
+            # Comparamos cada par de palabras en el grupo
+            for i in range(len(grupo)):
+                for j in range(i + 1, len(grupo)):
+                    word1, word2 = grupo[i], grupo[j]
+                    # Verificamos si difieren en exactamente 2 posiciones
+                    if word_distance(word1, word2) == 2:
+                        print(f"({word1}, {word2})")
 
 
 # ============================
