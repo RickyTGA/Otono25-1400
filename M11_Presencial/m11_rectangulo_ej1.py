@@ -32,8 +32,8 @@ class Rectangulo:
           alto (int or float): El alto del rectángulo.
         """
         # Almacena el ancho y el alto como atributos de la instancia.
-        # self.ancho = ...
-        # self.alto = ...
+        self.ancho = ancho
+        self.alto = alto
         print(f"Rectángulo creado con ancho {ancho} y alto {alto}")
 
     # TODO: Paso 2. Completa el método para calcular el área.
@@ -45,8 +45,7 @@ class Rectangulo:
           int or float: El área calculada.
         """
         # El área es el producto del ancho y el alto del objeto.
-        # return self.ancho * ...
-        return 0  # Reemplaza esto con tu cálculo
+        return self.ancho * self.alto
 
 
 # --- Bloque para probar tu clase ---
