@@ -1,0 +1,6 @@
+Item Code,Product Name,Category,Stock Type,Brand,Supplier,Quantity per Package,Unit,Price in $
+B01,Bacon,Meat,Dry,Brand A,Supplier 1,10,pcs,10.0
+E01,Eggs,Dairy,Fresh,Brand B,Supplier 2,12,pcs,6.0
+F01,Flour,Baking,Dry,Brand C,Supplier 1,5,kg,8.0
+M01,Milk,Dairy,Fresh,Brand B,Supplier 2,1,liter,2.5
+O01,Onion,Vegetables,Fresh,Local,Supplier 3,2,kg,3.0
