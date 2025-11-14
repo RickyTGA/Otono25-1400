@@ -22,7 +22,7 @@ class Rectangulo:
     Una clase para representar un rectángulo y calcular sus propiedades.
     """
 
-    # TODO: Paso 1. Completa el método de inicialización.
+    # TODO: TODO 1. Completa el método de inicialización.
     def __init__(self, ancho, alto):
         """
         Inicializa un nuevo objeto Rectangulo.
@@ -36,7 +36,7 @@ class Rectangulo:
         self.alto = alto
         print(f"Rectángulo creado con ancho {ancho} y alto {alto}")
 
-    # TODO: Paso 2. Completa el método para calcular el área.
+    # TODO: TODO 2. Completa el método para calcular el área.
     def calcular_area(self):
         """
         Calcula el área del rectángulo usando sus atributos.

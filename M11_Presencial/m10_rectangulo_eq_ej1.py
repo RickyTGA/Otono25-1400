@@ -43,8 +43,9 @@ class Rectangulo:
         # TODO: Paso 1. Comprueba si `otro` es una instancia de `Rectangulo`.
         
 
+
         # TODO: Paso 2. Compara los atributos y devuelve el resultado.
-       
+        
 
 
 # --- Bloque para probar tu clase ---

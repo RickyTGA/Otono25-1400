@@ -2,56 +2,35 @@
 El archivo Python gestion_registros.py (que debe contener la solución a ambas partes).
 Los archivos de datos generados: mi_registro.txt y producto_nuevo.json.
 
-# Parte 1: El Lector de Registros (Archivos de Texto Plano)
-Conceptos a practicar: open(), modos 'w' y 'r', with open(), write(), readlines().
-
-Instrucciones:
-1. Crear el Registro Inicial (Escritura):
-2. Crea un nuevo archivo Python llamado gestion_registros.py.
-3. Dentro de este script, usa el modo de escritura 'w' y la estructura with open(...) para crear un archivo de texto llamado mi_registro.txt.
-4. Escribe las siguientes cuatro líneas en el archivo 
-(asegúrate de incluir el salto de línea ’\n 
-′
- ):
-
-"Usuario: Ana - Ciudad: Madrid"
-"Usuario: Marleny - Ciudad: Barcelona"
-"Usuario: Sandra - Ciudad: Sevilla"
-"Usuario: Enrique - Ciudad: Valencia"
-
-5. Leer y Filtrar el Registro (Lectura):
-En el mismo script, usa la estructura with open(...) nuevamente, pero esta vez con el modo de lectura 'r', para abrir mi_registro.txt.
-
-6. Utiliza el método readlines() para cargar todas las líneas del archivo en una variable de tipo lista llamada lineas_registro.
-
-7. Itera sobre esta lista e imprime solamente las líneas que contengan la palabra "Madrid" o "Sevilla".
-
-8. Anexar Nuevos Datos (Anexar):
-Usa el modo 'a' (anexar) para abrir mi_registro.txt.
-9. Añade una nueva línea al final del archivo: "Usuario: Elena - Ciudad: Bilbao".
-10. Vuelve a realizar el paso 2 para confirmar que la nueva línea de Elena ahora está presente cuando lees el archivo.
+# Parte 1: Seguir las instrucciones en gestion_registros.py
 
 # Parte 2: El Conversor de Datos (CSV y JSON)
 
-Instrucciones:
-1. Crear un Archivo CSV:
-2. Crea un archivo llamado inventario_productos.csv con el siguiente contenido (puedes crearlo manualmente o usando Python, si ya conoces el módulo csv.writer):
-
-Code snippet
+A. Instrucciones:
+1. Crear un documento y llamarlo inventario.csv
+2. Puedes crearlo manualmente (editor de texto o excel) o automaticamente usando Python.
+3. El contenido debe ser el siguiente:
 
 ID,Nombre,Precio,Stock
 101,Monitor,150.99,25
 102,Teclado,35.50,150
 103,Raton,18.00,300
-Leer el CSV e Imprimir:
 
-3. En tu script gestion_registros.py, importa el módulo csv.
-4. Usa with open(...) y csv.reader para leer inventario_productos.csv.
-5. Itera sobre las filas e imprime solo los productos cuyo Stock sea menor a 100.
-6. Convertir a JSON (Serialización):
-Crea un diccionario de Python que represente un nuevo producto:
+B. Leer el CSV e Imprimir:
 
-Python
+1. En gestion_registros.py, importa el módulo csv al inicio. 
+2. Usa la estructura with open(...) junto con csv.reader() para leer inventario.py.
+3. Itera sobre las filas del documento e imprimi solo los productos cuyo stock sea menor a 100. 
+
+Salida esperada:
+Productos con bajo stock:
+ID: 101, Nombre: Monitor, Stock: 25
+
+C. Convertir un diccionario a JSON
+
+1. En gestion_registors.py al inicio importar json.
+2. Crea un diccionario llamado nuevo_producto asi:
+
 nuevo_producto = {
     "ID": 104,
     "Nombre": "Webcam",
@@ -59,10 +38,15 @@ nuevo_producto = {
     "Stock": 50
 }
 
-7. Importa el módulo json.
+3. Usa la funcion json.dump() para guardar el diccionario en un nuevo archivo llamado producto_nuevo.json.
 
-8. Usa la función json.dump() para guardar este diccionario en un nuevo archivo llamado producto_nuevo.json.
+D. Cargar desde JSON (Deserialización):
 
-Cargar desde JSON (Deserialización):
-9. Usa la función json.load() para leer el contenido del archivo producto_nuevo.json y cargarlo de nuevo en una variable de Python llamada data_cargada.
-10. Imprime el Nombre y el Precio del producto cargado para verificar que la conversión fue exitosa.
+1. Usa la función json.load() para abrir y leer producto_nuevo.json 
+2. Guarda el resultado en un variable llamada data_cargada.
+3. Imprime el Nombre y el Precio del producto cargado para verificar que fue exitosa.
+
+Salida esperada:
+Producto cargado desde JSON:
+Nombre: Webcam
+Precio: 45.99

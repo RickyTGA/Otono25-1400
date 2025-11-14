@@ -4,7 +4,7 @@
 import pytest
 
 try:
-    from M11_Presencial.m11_rectangulo_ej1 import Rectangulo
+    from m11_rectangulo_ej1 import Rectangulo
 except ImportError:
     pytest.fail(
         "No se pudo importar la clase 'Rectangulo' del archivo 'student_code_m12_ex1.py'.")
