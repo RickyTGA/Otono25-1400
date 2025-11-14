@@ -7,24 +7,26 @@ Los archivos de datos generados: mi_registro.txt y producto_nuevo.json.
 # Parte 2: El Conversor de Datos (CSV y JSON)
 
 A. Instrucciones:
-1. Crear un documento y llamarlo inventario.csv
-2. Puedes crearlo manualmente (editor de texto o excel) o automaticamente usando Python.
-3. El contenido debe ser el siguiente:
+1. Usar el documento informacion.csv
+2. El contenido debe ser el siguiente:
 
-ID,Nombre,Precio,Stock
-101,Monitor,150.99,25
-102,Teclado,35.50,150
-103,Raton,18.00,300
+cantante, cancion, año, pais, nombre
+Luis Fonsi, Despacito, 2017, Puerto Rico, Luis Alfonso Rodríguez López-Cepero
+Shakira, La Tortura, 2005, Colombia, Shakira Isabel Mebarak Ripoll
 
 B. Leer el CSV e Imprimir:
 
 1. En gestion_registros.py, importa el módulo csv al inicio. 
-2. Usa la estructura with open(...) junto con csv.reader() para leer inventario.py.
-3. Itera sobre las filas del documento e imprimi solo los productos cuyo stock sea menor a 100. 
+2. Usa la estructura with open(...) junto con csv.reader() para leerlo.
+3. Itera sobre las filas del documento e imprimir solo los cantantes.
 
 Salida esperada:
-Productos con bajo stock:
-ID: 101, Nombre: Monitor, Stock: 25
+
+
+
+
+
+
 
 C. Convertir un diccionario a JSON
 
