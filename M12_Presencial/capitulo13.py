@@ -1,0 +1,55 @@
+import os
+print(os.getcwd())
+
+"""
+Luis Fonsi, Despacito, 2017, Puerto Rico, Luis Alfonso Rodríguez López-Cepero
+Shakira, La Tortura, 2005, Colombia, Shakira Isabel Mebarak Ripoll
+Los Del Río, Macarena, 1993, Spain, Antonio Romero Monge
+Enrique Iglesias, Bailando, 2014, Spain, Enrique Miguel Iglesias Preysler
+Ricky Martin, Livin' la Vida Loca, 1999, Puerto Rico, Enrique Martín Morales
+Juanes, A Dios le Pido, 2002, Colombia, Juan Esteban Aristizábal Vásquez
+Selena, Amor Prohibido, 1994, Estados Unidos, Selena Quintanilla-Pérez 
+Maná, Rayando el Sol, 1990, Mexico, José Fernando "Fher"Olvera
+Romeo Santos, Propuesta Indecente, 2013, Estados Unidos, Anthony "Romeo" Santos
+Daddy Yankee, Gasolina, 2004, Puerto Rico, Ramón Luis Ayala Rodríguez
+Gloria Estefan, Conga, 1985, Cuba/Estados Unidos, Gloria María Milagrosa Fajardo García
+Marc Anthony, Vivir Mi Vida, 2013, Estados Unidos, Marco Antonio Muñiz Rivera
+Carlos Vives, La Gota Fría, 1993, Colombia, Carlos Alberto Vives Restrepo
+José Feliciano, Feliz Navidad, 1970, Puerto Rico, José Monserrate Feliciano García
+Héctor Lavoe, El Cantante, 1978, Puerto Rico, Héctor Juan Pérez Martínez
+Gipsy Kings, Bamboléo, 1987, France/Spain, Nicolás Reyes
+Celia Cruz, La Vida Es Un Carnaval, 1998, Cuba, Úrsula Hilaria Celia de la Caridad Cruz Alfonso Michel
+Teló, Ai Se Eu Te Pego, 2011, Brazil, Michel Teló Thalía,
+Piel Morena, 1995, Mexico, Ariadna Thalía Sodi Miranda
+Ricardo Montaner, Tan Enamorados, 1988, Venezuela/Argentina, Héctor Eduardo Reglero Montaner
+Alejandro Sanz, Corazón Partío, 1997, Spain, Alejandro Sánchez Pizarro
+Juan Gabriel, Querida, 1984, Mexico, Alberto Aguilera Valadez
+Ritchie Valens, La Bamba, 1958, Estados Unidos, Richard Steven Valenzuela
+Aventura, Obsesión, 2002, Estados Unidos, Anthony "Romeo"
+Santos J Balvin, Mi Gente, 2017, Colombia, José Álvaro Osorio Balvin
+Bad Bunny, Callaita, 2019, Puerto Rico, Benito Antonio Martínez Ocasio
+RBD, Sálvame, 2004, Mexico, Anahí Giovanna Puente Portilla
+Salsa Kids, Déjame Un Beso, 1995, Puerto Rico, Omar Rodriguez
+Rosalía, Malamente, 2018, Spain, Rosalía Vila Tobella
+Soda Stereo, De Música Ligera, 1990, Argentina, Gustavo Adrián Cerati Clark
+Los Bukis, Tu Cárcel, 1987, Mexico, Marco Antonio Solís Sosa
+Christina Aguilera, Pero Me Acuerdo de Ti, 2000, Estados Unidos, Christina María Aguilera
+Prince Royce, Darte Un Beso, 2013, Estados Unidos, Geoffrey Royce Rojas
+Carla Morrison, Disfruto, 2012, Mexico, Carla Patricia Morrison Flores
+Maná, Labios Compartidos, 2006, Mexico, José Fernando "Fher" Olvera
+Julieta Venegas, Limón y Sal, 2006, Mexico, Julieta Venegas Percevault
+La Oreja de Van Gogh, Rosas, 2003, Spain, Amaia Montero Saldías 
+Reik, Noviembre Sin Ti, 2005, Mexico, Jesús Alberto Navarro Rosas
+Franco De Vita, Te Amo, 1988, Venezuela, Franco Atilio de Vita De Vito
+Tito El Bambino, El Amor, 2009, Puerto Rico, Efraín David Fines Nevárez
+Don Omar, Dale Don Dale, 2003, Puerto Rico, William Omar Landrón Rivera 
+Kany García, Hoy Ya Me Voy, 2007, Puerto Rico, Encarnita "Kany" García De Jesús
+Vicente Fernández, Volver Volver, 1972, Mexico, Vicente Fernández Gómez
+Luis Miguel, La Incondicional, 1988, Mexico, Luis Miguel Gallego Basteri
+Intocable, Enséñame a Olvidar, 1999, Estados Unidos, Ricardo Javier Muñoz
+Sin Bandera, Entra En Mi Vida, 2001, Mexico, Noel Schajris
+Chayanne, Dejaría Todo, 1998, Puerto Rico, Elmer Figueroa Arce
+Alejandro Fernández, Si Tú Supieras, 1997, Mexico, Alejandro Fernández Abarca
+Ha*Ash, Lo Aprendí de Ti, 2014, Estados Unidos/Mexico, Hanna Nicole Pérez
+Mon Laferte, Tu Falta de Querer, 2015, Chile/Mexico, Norma Monserrat Bustamante Laferte
+"""
