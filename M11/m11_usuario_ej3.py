@@ -21,8 +21,43 @@
 
 # Clase del ejercicio anterior (necesaria para este ejercicio)
 class CuentaBancaria:
-    # TODO: Usa la clase CuentaBancaria del ejercicio anterior.
-    pass
+    """
+    Una clase para simular una cuenta bancaria simple.
+    """
+
+    def __init__(self, titular, saldo_inicial=0):
+        """
+        Inicializa una nueva cuenta bancaria.
+
+        Args:
+          titular (str): El nombre del titular de la cuenta.
+          saldo_inicial (float, opcional): El saldo con el que empieza la cuenta. Por defecto es 0.
+        """
+        self.titular = titular
+        self.saldo = saldo_inicial
+
+    def depositar(self, cantidad):
+        """
+        Añade una cantidad al saldo de la cuenta.
+        """
+        self.saldo += cantidad
+        print(f"Depósito de {cantidad} realizado. Nuevo saldo: {self.saldo}")
+
+    def retirar(self, cantidad):
+        """
+        Retira una cantidad del saldo, si es posible.
+        """
+        if cantidad <= self.saldo:
+            self.saldo -= cantidad
+            print(f"Retiro de {cantidad} realizado. Nuevo saldo: {self.saldo}")
+        else:
+            print("Error: fondos insuficientes.")
+
+    def consultar_saldo(self):
+        """
+        Devuelve el saldo actual de la cuenta.
+        """
+        return self.saldo
 
 
 class Cliente:
@@ -44,7 +79,7 @@ class Cliente:
         # TODO: Paso 2. Crea una instancia de CuentaBancaria para este cliente
         # y guárdala en un atributo, por ejemplo, `self.cuenta`.
         # Pasa el nombre del cliente como el titular de la cuenta.
-        self.cuenta = None  # Reemplaza esto
+        self.cuenta = CuentaBancaria(nombre, saldo_inicial_cuenta)
 
     def hacer_deposito(self, cantidad):
         """
@@ -52,7 +87,7 @@ class Cliente:
         """
         # TODO: Paso 3. Llama al método `depositar` del objeto cuenta.
         print(f"Cliente {self.nombre} depositando {cantidad}...")
-        # self.cuenta.depositar(...)
+        self.cuenta.depositar(cantidad)
 
     def hacer_retiro(self, cantidad):
         """
@@ -60,14 +95,14 @@ class Cliente:
         """
         # TODO: Paso 4. Llama al método `retirar` del objeto cuenta.
         print(f"Cliente {self.nombre} retirando {cantidad}...")
-        # self.cuenta.retirar(...)
+        self.cuenta.retirar(cantidad)
 
     def ver_saldo(self):
         """
         Consulta el saldo de la cuenta del cliente.
         """
         # TODO: Paso 5. Llama al método `consultar_saldo` de la cuenta y devuelve el valor.
-        return 0  # Reemplaza esto
+        return self.cuenta.consultar_saldo()
 
 
 # --- Bloque para probar tu clase ---
