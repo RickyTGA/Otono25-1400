@@ -63,3 +63,6 @@ la solución implementada para cada uno.
 - Si tuvieras más tiempo, ¿cuáles serían las mejoras o nuevas funcionalidades prioritarias que implementarías?
 
 """
+import os
+print(f"Current Working Directory: {os.getcwd()}")
+print(f"Directorio actual: {os.getcwd()}")
