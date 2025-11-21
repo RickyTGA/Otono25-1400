@@ -21,12 +21,20 @@
     with open("salida.txt", "a") as fileToWriteTo:
         fileToWriteTo.write(data + "\n") 
 
-#agregarAlDocumento("Angelica,21,almuerzo")"""
-
+        
 # TODO 3: 
 # r 
-"""
+
 def leerDocumento():
     with open("salida.txt", "r") as fileToReadFrom:
         contenido = fileToReadFrom.read()
-        print(contenido)"""
+        print(contenido)
+
+leerDocumento()
+
+# TODO 4:
+# Cambiar capitulo13.py a un archivo de csv. Usarlo para que imprima solo los cantantes. 
+
+
+#TODO 5:
+# Crear codigo para hace otra cosa con el archiva .csv"""

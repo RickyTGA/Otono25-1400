@@ -1,5 +1,2 @@
+Enrique, 21, almuerzo
 Megan,38,desayuno
-Megan,38,desayuno
-Angelica,30,almuerzo
-Luis,25,cena
-Carlos,28,desayuno
